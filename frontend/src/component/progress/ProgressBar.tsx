@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import bar from '@/assets/icons/progressBar.svg';
+import bar from '../../assets/icons/progressBar.svg';
 function ProgressBar() {
   return (
     <Wrapper>
@@ -11,9 +11,10 @@ function ProgressBar() {
 
 export default ProgressBar;
 
-const Wrapper = styled.div`
-  font-size: 0;
-`;
+const Wrapper = styled.div``;
 const Progress = styled.img`
   width: 100%;
+  position: absolute;
+  bottom: -16.5px;
+  left: 0;
 `;
