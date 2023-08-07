@@ -1,4 +1,4 @@
-name: Backend Deploy When Merged Or Pushed
+name: Backend Deploy When Pushed
 
 on:
   push:
