@@ -69,10 +69,10 @@ jobs:
         run: |
           aws s3 cp \
             --region ap-northeast-2 \
-             ./backend-build.zip s3://umocharacerjar
+             ./backend-build.zip s3://umocharacerjar/server
 
       - name: Code Deploy
         run: aws deploy create-deployment --application-name umocharacer-deploy
           --deployment-config-name CodeDeployDefault.OneAtATime
           --deployment-group-name umocharacer-deploy-group
-          --s3-location bucket=umocharacerjar,bundleType=zip,key=backend-build.zip
+          --s3-location bucket=umocharacerjar,bundleType=zip,key=server/backend-build.zip
