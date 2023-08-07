@@ -1,12 +1,12 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /home/ubuntu/app/backend
+  - source: s3://umocharacerjar/server/backend-build.zip
+    destination: /home/ubuntu/server/backend
     overwrite: yes
 
 permissions:
-  - object: /home/ubuntu/app/backend
+  - object: /home/ubuntu/server/backend
     pattern: "**"
     owner: ubuntu
     group: ubuntu
